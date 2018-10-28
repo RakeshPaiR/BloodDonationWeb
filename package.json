@@ -1,0 +1,27 @@
+{
+  "name": "elixir",
+  "version": "1.0.0",
+  "description": "A web app platform for blood donation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RakeshPaiR/BloodDonationWeb.git"
+  },
+  "keywords": [
+    "node",
+    "sql"
+  ],
+  "author": "nithinsn@protonmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RakeshPaiR/BloodDonationWeb/issues"
+  },
+  "homepage": "https://github.com/RakeshPaiR/BloodDonationWeb#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "express": "^4.16.4"
+  }
+}
