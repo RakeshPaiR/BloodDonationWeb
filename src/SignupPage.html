@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+        <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+        <!-- Bootstrap CSS -->
+        <link href="https://fonts.googleapis.com/css?family=KoHo:400,700" rel="stylesheet">
+            <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet"/>
+            <style type="text/css">
+            
+            .addpadding {
+                margin-left: 1.3%;
+            }
+            .bg {
+                background-color: #e4e9ed;
+                padding: 2%;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                border: 1px solid #52b3d9;
+                color: #2c82c9;
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                margin-bottom: 2%;
+            }
+            .widthclass {
+                width: 100%;
+            }
+            .top-margin {
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+                margin-top: 7rem;
+                border-bottom: 0;
+                background-color: #52b3d9;
+                border-radius: 5px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+            .signup_title {
+                color: white;
+                font-size: 2rem;
+                padding: 0;
+            }
+            .brandname {
+                
+                font-weight: 700;
+                font-size: 2rem;
+                font-family: 'KoHo', sans-serif;
+            }
+            .forgot {
+                margin-top:  3%;
+                text-align: right;
+            }
+            a:hover {
+                text-decoration: none;
+                color: #1f3a93;
+
+            }
+            .loginbtn {
+                margin-top: 1%;
+            }
+            .reqField {
+            	color: #FF6666;
+            }
+            </style>
+            <title>
+                SIGNUP
+            </title>
+        </link>
+    </head>
+    <body>
+        <!-- Navbar code-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand brandname" href="file:///home/hp/DBMSProject/HomePage.html">
+                ELIXIR
+            </a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <button class="btn btn-outline-danger mr-sm-2 ml-auto" type="button">
+                    EMERGENCY REQUESTS
+                </button>
+                <a href="file:///home/hp/DBMSProject/LoginPage.html"><button class="btn btn-primary mr-sm-2" type="button">
+                    LOGIN
+                </button></a>
+            </div>
+        </nav>
+        <!-- Navbar code Ends -->
+        <!--Signup Title Div-->
+        <div class="container top-margin">
+            <span class="signup_title addpadding">
+                Sign Up
+            </span>
+        </div>
+        <!--Login Title Div Ends-->
+        <!--Login Form Div-->
+        <div class="container bg">
+            <form>
+            	<div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label for="inputname">
+                            Name&nbsp;<span class="reqField">*</span>
+                        </label>
+                        <input class="form-control" id="inputname" placeholder="Your Name..." type="text" required>
+                        </input>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputdob">
+                            Date of Birth&nbsp;<span class="reqField">*</span>
+                        </label>
+                        <input class="form-control" id="inputdob" placeholder="DD/MM/YYYY" type="date" max="2000-12-31" min="1938-01-01" required>
+                        </input>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="inputBlood">
+                            BloodGroup&nbsp;<span class="reqField">*</span>
+                        </label>
+                        <select class="form-control" id="inputBlood" required>
+                            <option selected="">
+                                BloodGroup
+                            </option>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail4">
+                            Email&nbsp;<span class="reqField">*</span>
+                        </label>
+                        <input class="form-control" id="inputEmail4" placeholder="Email" type="email" required>
+                        </input>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPhone">Mobile Number&nbsp;<span class="reqField">*</span></label>
+                        <input type="tel" class="form-control" name="Phone" placeholder="Mobile No." id="inputPhone" maxlength="10" minlength="10" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                    	<label for="inputPassword4">
+                            Password&nbsp;<span class="reqField">*</span>
+                        </label>
+                        <input class="form-control" id="inputPassword4" placeholder="Password" type="password" required>
+                        </input>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword5">
+                            Confirm Password&nbsp;<span class="reqField">*</span>
+                        </label>
+                        <input class="form-control" id="inputPassword5" placeholder="Confirm Password" type="password" required>
+                        </input>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">
+                        Address
+                    </label>
+                    <input class="form-control" id="inputAddress" placeholder="1234 Main St" type="text">
+                    </input>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress2">
+                        Address 2
+                    </label>
+                    <input class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" type="text">
+                    </input>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputCity">
+                            City
+                        </label>
+                        <input class="form-control" id="inputCity" type="text">
+                        </input>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputBloodMonth">
+                        	Month of Last Blood Donation
+                        </label>
+                        <input class="form-control" id="inputBloodDate" placeholder="DD/MM/YYYY" type="month">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">
+                            Zip&nbsp;<span class="reqField">*</span>
+                        </label>
+                        <input class="form-control" id="inputZip" type="text" required>
+                        </input>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" id="gridCheck" type="checkbox">
+                            <label class="form-check-label" for="gridCheck">
+                                Remember Me
+                            </label>
+                        </input>
+                    </div>
+                </div>
+                <button class="btn btn-success widthclass" type="submit">
+                    SIGN UP
+                </button>
+                
+            </form>
+        </div>
+        <!--Login Form Div Ends-->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+        </script>
+        <script crossorigin="anonymous" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+        </script>
+    </body>
+</html>
