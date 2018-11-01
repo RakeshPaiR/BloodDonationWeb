@@ -10,5 +10,11 @@ app.use('/node_modules',  express.static(__dirname + '/node_modules'));
 
 app.use('/style',  express.static(__dirname + '/style'));
 app.get('/',function(req,res){
-    res.sendFile('startpage.html',{'root': __dirname + '/src'});
+    res.sendFile('HomePage.html',{'root': __dirname + '/src'});
+})
+app.get('/login',function(req,res){
+	res.sendFile('LoginPage.html',{'root':__dirname + '/src'});
+})
+app.get('/signup',function(req,res){
+	res.sendFile('SignupPage.html',{'root':__dirname + '/src'});
 })
