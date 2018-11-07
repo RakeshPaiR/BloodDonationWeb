@@ -18,3 +18,6 @@ app.get('/login',function(req,res){
 app.get('/signup',function(req,res){
 	res.sendFile('SignupPage.html',{'root':__dirname + '/src'});
 })
+app.get('/emergency',function(req,res){
+	res.sendFile('EmergencyRequests.html',{'root':__dirname + '/src'});
+})
