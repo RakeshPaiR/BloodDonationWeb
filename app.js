@@ -1,6 +1,7 @@
 var express = require('express')
 , routes = require('./routes')
 , user = require('./routes/user')
+, signup = require('./routes/signup')
 , http = require('http')
 , path = require('path');
 //var methodOverride = require('method-override');
@@ -40,10 +41,11 @@ app.get('/',routes.index);
 app.get('/home/dashboard',routes.dashboard);
 app.get('/emergency',routes.emergency);
 app.get('/login', routes.login);//call for login page
-app.get('/signup', user.signup);//call for signup page
-app.post('/signup',user.signup);
+app.get('/signup', routes.signup);//call for signup page
+app.post('/signup',signup.signup);
 app.post('/login', user.login);//call for login post
 app.post('/emergency',user.emergency);
+app.get('/logout',user.logout);
 
  /**
 * Module dependencies.

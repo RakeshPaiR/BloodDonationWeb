@@ -1,17 +1,4 @@
-exports.signup = function(req, res){
-    message = '';
-    if(req.method == "POST"){
-       var message='';
-       var sess=req.session;
-       if(req.method=="POST"){
-          var post = req.body;
-          console.log(req.body);
-       }
- 
-    } else {
-       res.render('signup',{message: message});
-    }
- };
+
 
  exports.login = function(req, res){
     var message = '';
@@ -33,12 +20,12 @@ exports.signup = function(req, res){
           }
           else{
              message = 'Wrong Credentials.';
-             res.render('login.ejs',{message: message});
+             res.render('login.ejs',{alert: message,info: ''});
           }
                   
        });
     } else {
-       res.render('login.ejs',{message: message});
+       res.render('login.ejs',{alert: message,info:''});
     }         
  };
 
@@ -47,3 +34,8 @@ exports.signup = function(req, res){
     console.log(req.body);
     res.render('home',{message: message});
  }
+exports.logout=function(req,res){
+   console.log(req.session);
+   req.session = null;
+   res.redirect('login');
+};

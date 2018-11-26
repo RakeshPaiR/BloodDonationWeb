@@ -91,36 +91,42 @@
             </div>
         </nav>
         <!-- Navbar code Ends -->
+       
         <!--Signup Title Div-->
         <div class="container top-margin">
+                
             <span class="signup_title addpadding">
                 Sign Up
             </span>
         </div>
         <!--Login Title Div Ends-->
+        
         <!--Login Form Div-->
         <div class="container bg">
+                <% if (message.length > 0) { %>
+                    <div class="alert alert-danger col-sm-12" style="margin:10px;"><%= message %></div>
+        <% } %>
             <form role="form" method="post" action="/signup">
             	<div class="form-row">
                     <div class="form-group col-md-5">
                         <label for="inputname">
                             Name&nbsp;<span class="reqField">*</span>
                         </label>
-                        <input class="form-control" id="inputname" placeholder="Your Name..." type="text" required>
+                        <input class="form-control" id="inputname" name="name" placeholder="Your Name..." type="text" required>
                         </input>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputdob">
                             Date of Birth&nbsp;<span class="reqField">*</span>
                         </label>
-                        <input class="form-control" id="inputdob" placeholder="DD/MM/YYYY" type="date" max="2000-12-31" min="1938-01-01" required>
+                        <input class="form-control" id="inputdob" name="dob" placeholder="DD/MM/YYYY" type="date" max="2000-12-31" min="1938-01-01" required>
                         </input>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="inputBlood">
                             BloodGroup&nbsp;<span class="reqField">*</span>
                         </label>
-                        <select class="form-control" id="inputBlood" required>
+                        <select class="form-control" name="bg" id="inputBlood" required>
                             <option selected="">
                                 BloodGroup
                             </option>
@@ -140,25 +146,25 @@
                         <label for="inputEmail4">
                             Email&nbsp;<span class="reqField">*</span>
                         </label>
-                        <input class="form-control" id="inputEmail4" placeholder="Email" type="email" required>
+                        <input class="form-control" id="inputEmail4" name="email" placeholder="Email" type="email" required>
                         </input>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPhone">Mobile Number&nbsp;<span class="reqField">*</span></label>
-                        <input type="tel" class="form-control" name="Phone" placeholder="Mobile No." id="inputPhone" maxlength="10" minlength="10" required>
+                        <input type="tel" class="form-control" name="phone" placeholder="Mobile No." id="inputPhone" maxlength="10" minlength="10" required>
                     </div>
                     <div class="form-group col-md-6">
                     	<label for="inputPassword4">
                             Password&nbsp;<span class="reqField">*</span>
                         </label>
-                        <input class="form-control" id="inputPassword4" placeholder="Password" type="password" required>
+                        <input class="form-control" id="inputPassword4" name="password" placeholder="Password" type="password" required>
                         </input>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword5">
                             Confirm Password&nbsp;<span class="reqField">*</span>
                         </label>
-                        <input class="form-control" id="inputPassword5" placeholder="Confirm Password" type="password" required>
+                        <input class="form-control" id="inputPassword5" name="cpassword" placeholder="Confirm Password" type="password" required>
                         </input>
                     </div>
                 </div>
@@ -166,14 +172,14 @@
                     <label for="inputAddress">
                         Address
                     </label>
-                    <input class="form-control" id="inputAddress" placeholder="1234 Main St" type="text">
+                    <input class="form-control" id="inputAddress" name="addr1" placeholder="1234 Main St" type="text">
                     </input>
                 </div>
                 <div class="form-group">
                     <label for="inputAddress2">
                         Address 2
                     </label>
-                    <input class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" type="text">
+                    <input class="form-control" id="inputAddress2" name="addr2" placeholder="Apartment, studio, or floor" type="text">
                     </input>
                 </div>
                 <div class="form-row">
@@ -181,20 +187,20 @@
                         <label for="inputCity">
                             City
                         </label>
-                        <input class="form-control" id="inputCity" type="text">
+                        <input class="form-control" id="inputCity" name="city" type="text">
                         </input>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputBloodMonth">
-                        	Month of Last Blood Donation
+                        	Date of Last Blood Donation
                         </label>
-                        <input class="form-control" id="inputBloodDate" placeholder="DD/MM/YYYY" type="month">
+                        <input class="form-control" id="inputBloodDate" name="lbd" placeholder="DD/MM/YYYY" type="date">
                     </div>
                     <div class="form-group col-md-2">
-                        <label for="inputZip">
-                            Zip&nbsp;<span class="reqField">*</span>
+                        <label for="inputpin">
+                            PIN&nbsp;<span class="reqField">*</span>
                         </label>
-                        <input class="form-control" id="inputZip" type="text" required>
+                        <input class="form-control" id="inputpin" type="text" name="pin" required>
                         </input>
                     </div>
                 </div>

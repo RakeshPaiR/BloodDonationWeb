@@ -8,9 +8,13 @@ exports.index = function(req, res){
 
  exports.login = function(req, res){
     var message = '';
-    req.session.userid="NULL";
-    res.render('login',{message: message})
+    req.session.userId="NULL";
+    res.render('login',{alert:'',info:''})
   };
+  exports.signup = function(req, res){
+    message = '';
+    res.render('signup',{message: message});
+    };
 
   exports.emergency = function(req, res){
     var message = '';
@@ -22,5 +26,5 @@ exports.dashboard= function(req,res){
   if(req.session.userid != "NULL")
     res.render('dashboard',{message: message})
   else 
-  res.render('login',{message: message})
+  res.render('login',{alert: message,info:''});
 };
