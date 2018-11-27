@@ -15,39 +15,20 @@
 			       		.bg-light {
 			       			background-color: #dadfe1;
 			       		}
-                        .carousel-indicators li {
-						    border-radius: 10px;
-						    margin: 1px 3px;
-						    height: 10px;
-						    max-width: 10px;
-						    border: 1px solid #FFF;
-						    background-color: white;
-						}
-						.carousel-indicators .active {
-						    background-color: #e8ecf1;
-						    max-width: 15px;
-						    margin: 0 3px;
-						    height: 15px;
-						}
-						.carousel img {
-
-							width: 100%;
-							height: 35rem;
-							margin: auto;
-						}
 						.top-margin {
 							margin-top: 5rem;
 						}
 						.footer {
+							position: absolute;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							padding: 1rem;
 							background-color: #2c3e50;
-							margin-top: 3%;
 							width: 100%;
-							height: 40%;
 							color: #ecf0f1;
+							text-align: center;
 						}
-                        .signup {
-                            margin-top: 1%;
-                        }
 						.brandname {
 							
 							font-weight: 700;
@@ -63,23 +44,14 @@
 							font-weight: 700;
 							font-family: 'KoHo', sans-serif;
 						}
+						
 						.buttons {
 							margin-top: 3rem;
 							margin-left: auto;
 							margin-right: auto;
 						}
-						.aim {
-							text-align: center;
-							margin-top: 0.5%;
-							margin-right: auto;
-							max-width: 95%;
-							margin-left: 2.5%;
-							padding-top: 1%;
-							padding-bottom: 1%;
-							background-color: #ffffcc;
-						}
-						.aim_title {
-							text-align: center;
+						.container {
+							margin-top: 8rem;
 						}
 							
 						
@@ -114,12 +86,129 @@
                     
             </div>
         </nav>
-        <!-- Navbar code Ends -->
-      
+		<!-- Navbar code Ends -->
+		<div class="container">
+				<div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="ModalCenter" role="dialog" tabindex="-1">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<form role="form" method="post" action="/request">
+									<div class="modal-header">
+										<h5 class="modal-title" id="exampleModalCenterTitle">
+											Request Blood
+										</h5>
+										<button aria-label="Close" class="close" data-dismiss="modal" type="button">
+											<span aria-hidden="true">
+												×
+											</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<div class="form-group">
+											<label for="inputBlood">
+												Patient's BloodGroup
+											</label>
+											<select class="form-control" name="bg" id="inputBlood" required="">
+												<option disabled="" hidden="" selected="" value="">
+													Patient Blood Group
+												</option>
+												<option>
+													A+
+												</option>
+												<option>
+													A-
+												</option>
+												<option>
+													B+
+												</option>
+												<option>
+													B-
+												</option>
+												<option>
+													AB+
+												</option>
+												<option>
+													AB-
+												</option>
+												<option>
+													O+
+												</option>
+												<option>
+													O-
+												</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="inputZip">
+												City
+											</label>
+											<input class="form-control" id="inputZip" name="city" placeholder="Ernakulam" required="" type="text">
+											</input>
+										</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1">
+												Password
+											</label>
+											<input class="form-control" id="exampleInputPassword1" placeholder="Password" name="pwd" required="" type="password"/>
+										</div>
+										<div class="form-group">
+											<label for="days">
+												Date by which blood is required
+											</label>
+											<input class="form-control" type="date" name="date" id="days" min="0"></input>
+										</div>
+									<div class="modal-footer">
+										<button class="btn btn-secondary" data-dismiss="modal" type="button">
+											Close
+										</button>
+										<button class="btn btn-warning" type="submit">
+											Request
+										</button>
+									</div>
+									</div>
+		
+								</form>
+							</div>
+						</div>
+					</div>
+				<div class="row">
+						<div class="col-sm-2"></div>
+						<div class="col-md-8">
+								<% if (alert.length > 0) { %>
+									<div class="alert alert-danger col-sm-12"><%= alert %></div>
+						<% } %>
+						<% if (info.length > 0) { %>
+							<div class="alert alert-success col-sm-12"><%= info%></div>
+				<% } %>
+				<h2>Dashboard</h2><br>
+						<div class="row">
+								<div class="col-sm-6">
+								  <div class="card">
+									<div class="card-body">
+									  <h5 class="card-title">View Requests</h5>
+									  <p class="card-text">You can see blood request made by others including emergency request and do actions on your requests.</p>
+									  <a href="#" class="btn btn-primary">See requests</a>
+									</div>
+								  </div>
+								</div>
+								<div class="col-sm-6">
+								  <div class="card">
+									<div class="card-body">
+									  <h5 class="card-title">Make request</h5>
+									  <p class="card-text">You can make a normal request here and requires blood group and date required.Others will be notified.</p>
+									  <a class="ml-auto" href="#ModalCenter">
+											<button class="btn btn-primary" data-target="#ModalCenter" data-toggle="modal" type="button">
+												Make Request
+											</button>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							</div></div>
+			  </div>
         <!--Footer-->
-        <div class="footer">
-        	<span class="webname">ELIXIR</span>
-        </div>
+        <footer class="footer">
+        	<span style="font-family: 'KoHo', sans-serif;">ELIXIR</span>
+		</footer>
         <!--Footer Ends-->
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

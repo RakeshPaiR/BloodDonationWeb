@@ -8,7 +8,7 @@ exports.index = function(req, res){
 
  exports.login = function(req, res){
     var message = '';
-    req.session.userId="NULL";
+    req.session.userId=null;
     res.render('login',{alert:'',info:''})
   };
   exports.signup = function(req, res){
@@ -23,8 +23,11 @@ exports.index = function(req, res){
 exports.dashboard= function(req,res){
   var message = '';
   console.log(req.session.userid)
-  if(req.session.userid != "NULL")
-    res.render('dashboard',{message: message})
+  if(req.session.userId != null)
+    res.render('dashboard',{alert: message,info:''})
   else 
-  res.render('login',{alert: message,info:''});
+  res.redirect('/login')
 };
+exports.request = function(req,res){
+  res.redirect('/home/dashboard');
+}

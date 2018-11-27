@@ -45,6 +45,8 @@ app.get('/signup', routes.signup);//call for signup page
 app.post('/signup',signup.signup);
 app.post('/login', user.login);//call for login post
 app.post('/emergency',user.emergency);
+app.get('/request',routes.request);
+app.post('/request',user.request);
 app.get('/logout',user.logout);
 
  /**

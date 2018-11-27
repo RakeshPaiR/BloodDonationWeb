@@ -183,13 +183,13 @@
                     </div>
                 </div>
             </div>
-            <form role="form" method="post" action="emergency">
+            <form role="form" method="post" action="/emergency">
                 <div class="form-row">
                     <div class="form-group col-md-7">
                         <label for="inputname">
                             Patient's Name
                         </label>
-                        <input class="form-control" id="inputname" placeholder="Patient's Name..." type="text">
+                        <input class="form-control" id="inputname" name="name" placeholder="Patient's Name..." type="text">
                         </input>
                     </div>
                     <div class="form-group col-md-5">
@@ -199,7 +199,7 @@
                                 *
                             </span>
                         </label>
-                        <select class="form-control" id="inputBlood" required="">
+                        <select class="form-control" id="inputBlood" name="bg" required="">
                             <option disabled="" hidden="" selected="" value="">
                                 Patient Blood Group
                             </option>
@@ -238,7 +238,7 @@
                                 *
                             </span>
                         </label>
-                        <input class="form-control" id="inputEmail4" placeholder="Email" required="" type="email">
+                        <input class="form-control" id="inputEmail4" placeholder="Email" name="email" required="" type="email">
                         </input>
                     </div>
                     <div class="form-group col-md-5">
@@ -249,7 +249,7 @@
                                     *
                                 </span>
                             </label>
-                            <input class="form-control" id="inputPhone" maxlength="10" minlength="10" name="Phone" placeholder="Mobile No." required="" type="tel">
+                            <input class="form-control" id="inputPhone" maxlength="10" minlength="10" name="phone" placeholder="Mobile No." required="" type="tel">
                             </input>
                         </span>
                     </div>
@@ -259,7 +259,7 @@
                         <label for="inputAddress">
                             Hospital
                         </label>
-                        <input class="form-control" id="inputAddress" placeholder="Hospital Name..." type="text">
+                        <input class="form-control" id="inputAddress" placeholder="Hospital Name..." name="hname" type="text">
                         </input>
                     </div>
                     <div class="form-group col-md-5">
@@ -269,7 +269,7 @@
                                 *
                             </span>
                         </label>
-                        <input class="form-control" id="inputZip" placeholder="682017" required="" type="text">
+                        <input class="form-control" id="inputZip" placeholder="682017" name="pin" required="" type="text">
                         </input>
                     </div>
                 </div>
