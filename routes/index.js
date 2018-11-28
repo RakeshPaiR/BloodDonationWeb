@@ -22,7 +22,7 @@ exports.index = function(req, res){
   }
 exports.dashboard= function(req,res){
   var message = '';
-  console.log(req.session.userid)
+  console.log(req.session.userId)
   if(req.session.userId != null)
     res.render('dashboard',{alert: message,info:''})
   else 

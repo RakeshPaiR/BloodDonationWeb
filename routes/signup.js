@@ -41,6 +41,7 @@ exports.signup = function(req,res){
             console.log(ins_sql);
             db.query(ins_sql, function(err,results){
                 console.log("In insertion");
+                console.log(err)
                 if(!err){
                     message = "Sign Up Succesful! Log in now";
                     res.render('login',{alert:'',info: message});

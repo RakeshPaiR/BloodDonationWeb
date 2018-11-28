@@ -47,6 +47,7 @@ app.post('/signup',signup.signup);
 app.post('/login', user.login);//call for login post
 app.post('/emergency',request.emergency);
 app.get('/request',routes.request);
+app.get('/viewrequest',request.viewrequest);
 app.post('/request',request.request);
 app.get('/logout',user.logout);
 
