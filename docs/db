@@ -1,0 +1,33 @@
+USE elixir;
+CREATE TABLE IF NOT EXISTS volunteers( 
+    id INT NOT NULL PRIMARY KEY,
+    email VARCHAR(30) NOT NULL, 
+    bg VARCHAR(3) NOT NULL, 
+    pin VARCHAR(6) NOT NULL, 
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL, 
+    pwd VARCHAR(32) NOT NULL, 
+    mobile VARCHAR(10), 
+    addr1 VARCHAR(30), 
+    addr2 VARCHAR(30), 
+    city VARCHAR(20), 
+    dob DATE NOT NULL, 
+    lbd DATE);
+-- INSERT INTO volunteers VALUES(
+--     1, "admin@elixir","O+","689585","admin","elixir","adminpass","0000000000","none","none","Ernakulam","00/00/00","00/00/00"
+-- );
+
+CREATE TABLE IF NOT EXISTS requests(
+    id INT PRIMARY KEY,
+    is_emg CHAR NOT NULL,
+    name VARCHAR(30),
+    age INT,
+    status CHAR NOT NULL,
+    contact VARCHAR(10),
+    city VARCHAR(20),
+    req_d DATETIME NOT NULL,
+    bg VARCHAR(3) NOT NULL,
+    hname VARCHAR(30),
+    email VARCHAR(30) NOT NULL);
+
+

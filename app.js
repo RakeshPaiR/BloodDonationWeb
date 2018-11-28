@@ -2,6 +2,7 @@ var express = require('express')
 , routes = require('./routes')
 , user = require('./routes/user')
 , signup = require('./routes/signup')
+, request = require('./routes/request')
 , http = require('http')
 , path = require('path');
 //var methodOverride = require('method-override');
@@ -44,9 +45,9 @@ app.get('/login', routes.login);//call for login page
 app.get('/signup', routes.signup);//call for signup page
 app.post('/signup',signup.signup);
 app.post('/login', user.login);//call for login post
-app.post('/emergency',user.emergency);
+app.post('/emergency',request.emergency);
 app.get('/request',routes.request);
-app.post('/request',user.request);
+app.post('/request',request.request);
 app.get('/logout',user.logout);
 
  /**

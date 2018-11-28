@@ -30,30 +30,6 @@
     }         
  };
 
- exports.emergency = function(req,res){
-    message='';
-    console.log(req.body);
-    message = "Request succesful";
-    res.render('home',{message: message});
- }
- exports.request = function(req,res){
-    var id=req.session.userId;
-    var pwd=req.body.pwd;
-    console.log(req.body)
-    var sql="SELECT id,first_name,email FROM `volunteers` WHERE `id`='"+id+"' and pwd = '"+pwd+"'";  
-    console.log(sql);                         
-    db.query(sql, function(err, results){      
-          if(results.length){
-             console.log(results[0]);
-             message = "Request made succesfully!";
-             //res.redirect('/home/dashboard');
-             res.render('dashboard',{alert:'',info: message})
-          }
-          else{
-             message = 'Wrong Password.';
-             res.render('dashboard',{alert: message,info: ''});
-          }})}
-
 exports.logout=function(req,res){
    console.log(req.session);
    req.session = null;
